@@ -1,0 +1,12 @@
+<h1>게시판</h1>
+<% @posts.each do |x| %>
+   게시물번호 : <%= x.id %><br>
+   제목 : <%=x.title %><br>
+   내용 : <%=x.content %><br>
+   <a href="/home/delete/<%=x.id%>" data-confirm="정말 삭제하시겠습니까?">삭제</a><br>
+   <a href="/home/edit/<%=x.id%>">수정</a><br>
+<%end%>
+   
+
+<a href ='/home/new'>글 쓰기</a>
+
